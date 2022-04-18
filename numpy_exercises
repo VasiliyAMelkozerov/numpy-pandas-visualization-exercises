@@ -1,0 +1,36 @@
+import numpy as np
+
+a = np.array([4, 10, 12, 23, -2, -1, 0, 0, 0, -6, 3, -7])
+b = np.square.array([4, 10, 12, 23, -2, -1, 0, 0, 0, -6, 3, -7])
+
+# 1 How many negative numbers are there?
+
+print(a[a < 0])
+print("There are",len(a[a < 0]),"negative numbers in the given array.")
+
+# 2 How many positive numbers are there?
+
+print(a[a > 0])
+print("There are",len(a[a > 0]),"positive numbers in the given array.")
+
+# 3 How many even positive numbers are there?
+
+print(a[(a > 0) & (a % 2 == 0)])
+
+# 4 If you were to add 3 to each data point, how many positive numbers would there be?
+
+b = [4, 10, 12, 23, -2, -1, 0, 0, 0, -6, 3, -7]
+
+array_with_one_added = []
+for n in b:
+    array_with_one_added.append(n + 3)
+print("The postive numbers are", array_with_one_added)
+
+print("Another way to solve this is:", a + 3)
+
+# 5 If you squared each number, 
+# what would the new mean and standard deviation be?
+
+print(b.std)
+# big_word = a.std
+# print(np.square(big_word))
